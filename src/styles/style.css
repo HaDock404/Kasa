@@ -1,0 +1,17 @@
+.toogle--close {
+    transition-duration: 120ms;
+    transform: rotate(180deg);
+}
+
+.toogle--open {
+    transition-duration: 120ms;
+    transform: rotate(180deg);
+  }
+
+.collapse--close {
+    display: none;
+}
+
+.collapse--open {
+    display: block;
+}

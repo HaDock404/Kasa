@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Data from '../datas/Data.json'
+//import { CardSection, CardImage, CardTitle } from '../components/Card'
+import Card from '../components/Card';
 
 
 const CardArticle = styled.article`
@@ -17,46 +19,28 @@ const CardArticle = styled.article`
     grid-column-gap: 60px;
 	grid-row-gap: 50px;
     `
-const CardSection = styled.section`
-background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    border-radius: 10px;
-    width: 340px;
-    height: 340px;
-    display: flex;
-    flex-direction: column;
-    `
 
-const CardImage = styled.img`
-    border-top-left-radius: 10px 10px;
-    border-top-right-radius: 10px 10px;
-    width: 340px;
-    height: 280px;
-    object-fit: cover;
-    `
-
-const CardTitle = styled.h2`
-    color: white;
-    font-size: 18px;
-    font-weight: 100;
-    margin: 0px;
-    margin-left: 20px;
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    `
-
-function App() {
-
-    //console.log(Data[0].id)
-
-    Data.map(e => console.log(e.title))
+/*function App() {
       
     return (
     <CardArticle>
-        {Data.map(e => <CardSection><CardImage src={e.cover} /><CardTitle>{e.title}</CardTitle></CardSection>)}
+        {Data.map(e => 
+        <CardSection>
+            <CardImage src={e.cover} />
+            <CardTitle>{e.title}</CardTitle>
+        </CardSection>)}
     </CardArticle>
     )
+}*/
+
+function App() {
+    return (
+        <CardArticle>
+            {Data.map(e =>
+                <Card cover={e.cover} title={e.title}></Card>
+                )}          
+        </CardArticle>
+    );
 }
 
 export default App

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 
 import logo from '../assets/logo.jpg'
-import { Colors } from '../styles/Colors.jsx'
+import { Colors } from '../styles/Colors.js'
 
 const CardLogo = styled.img`
     width: 200px;

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Colors } from '../styles/Colors.jsx'
+import { Colors } from '../styles/Colors.js'
 import { Link } from 'react-router-dom';
 
 const CardError = styled.div`

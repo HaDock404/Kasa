@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import "./styles/normalize.css"
+import "./styles/style.css"
 
 import Home from './pages/Home';
 import Error from './pages/Error'
