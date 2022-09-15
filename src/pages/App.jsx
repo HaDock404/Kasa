@@ -20,24 +20,13 @@ const CardArticle = styled.article`
 	grid-row-gap: 50px;
     `
 
-/*function App() {
-      
-    return (
-    <CardArticle>
-        {Data.map(e => 
-        <CardSection>
-            <CardImage src={e.cover} />
-            <CardTitle>{e.title}</CardTitle>
-        </CardSection>)}
-    </CardArticle>
-    )
-}*/
+//export const id = "alexandre"
 
 function App() {
     return (
         <CardArticle>
-            {Data.map(e =>
-                <Card cover={e.cover} title={e.title}></Card>
+            {Data.map((e, index) =>
+                <Card path={`/lodging/${e.id}`} cover={e.cover} title={e.title} index={index}></Card>
                 )}          
         </CardArticle>
     );

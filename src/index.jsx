@@ -16,6 +16,7 @@ import GlobalStyle from './styles/GlobalStyle';
 import App from './pages/App'
 import Footer from './pages/Footer'
 import About from './pages/About'
+import Lodging from './pages/Lodging'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +26,7 @@ root.render(
         <Routes>
           <Route path="/" element={<><Home /> <App /><Footer /></>}/>
           <Route path="/about" element={<><Home /><About /></>}/>
+          <Route path={`/lodging/:id`} element={<><Lodging /></>}/>
           <Route path="*" element={<Error />}/>
         </Routes>
     <React.StrictMode></React.StrictMode>
