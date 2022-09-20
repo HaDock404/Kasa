@@ -25,8 +25,8 @@ root.render(
     <Header />
         <Routes>
           <Route path="/" element={<><Home /> <App /><Footer /></>}/>
-          <Route path="/about" element={<><Home /><About /></>}/>
-          <Route path={`/lodging/:id`} element={<><Lodging /></>}/>
+          <Route path="/about" element={<><Home /><About /><Footer /></>}/>
+          <Route path={`/lodging/:id`} element={<><Lodging /><Footer /></>}/>
           <Route path="*" element={<Error />}/>
         </Routes>
     <React.StrictMode></React.StrictMode>

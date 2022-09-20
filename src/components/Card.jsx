@@ -37,7 +37,7 @@ export const test = "hello"
 function Card(props) {
 
     return (
-        <StyledCard to={props.path} key={props.index}>
+        <StyledCard to={props.path}>
             <CardImage src={props.cover}/>
             <CardTitle>{props.title}</CardTitle>
         </StyledCard>

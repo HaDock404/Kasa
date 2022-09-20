@@ -33,6 +33,8 @@ const CardHeader = styled.header`
     justify-content: space-between;
     height: 75px;
     margin-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
 `
 
 function Header() {

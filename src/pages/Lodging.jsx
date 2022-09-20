@@ -15,17 +15,25 @@ const SectionTitle = styled.section`
     flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
     `
 const SectionTag = styled.section`
     display: flex;
     flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
     `
 
 const SectionInfo = styled.section`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
     `
+
+const styleInfoBox = {marginLeft: "0px", marginRight: "0px", width: "40%"}
 
 function Lodging() {
 
@@ -35,16 +43,17 @@ function Lodging() {
         if (Data[i].id === id) {
             return (
                 <GlobalLodging>
-                    <Carousel />
+                    <Carousel backgroundDisplay={Data[i].pictures}/>
                     <SectionTitle>
-                        <TitleLodging title={Data[i].title} description={Data[i].description}/>
+                        <TitleLodging title={Data[i].title} location={Data[i].location}/>
                         <Host name={Data[i].host.name} picture={Data[i].host.picture}/>
                     </SectionTitle>
                     <SectionTag>
                         <Tag />
                     </SectionTag>
                     <SectionInfo>
-                        <InfoBox></InfoBox>
+                        <InfoBox title="Description" description={Data[i].description} style={styleInfoBox}></InfoBox>
+                        <InfoBox title="Equipements" description={Data[i].equipments} style={styleInfoBox}></InfoBox>
                     </SectionInfo>
                 </GlobalLodging>
             )

@@ -11,7 +11,7 @@ const CardArticle = styled.article`
 
 const CardTitle = styled.div`
     background-color: ${Colors.primary};
-    width: 1023px;
+    width: 100%;
     height: 47px;
     border-radius: 5px;
     display: flex;
@@ -39,9 +39,11 @@ const CardSpan =styled.span`
 
 const CardDescription = styled.div`
     background-color: #F6F6F6;
-    width: 1023px;
+    width: 100%;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+    margin-right: 100px;
+    margin-left: 100px;
     `
 
 const CardDescriptionText = styled.h3`
@@ -59,12 +61,11 @@ function InfoBox(props) {
 
     const toggle = () => {
         setState(!state)
-        console.log("hello")
 
     }
 
     return (
-        <CardArticle>
+        <CardArticle style={props.style}>
             <CardTitle>
                 <Cardh2>{props.title}</Cardh2>
                 <CardSpan onClick={toggle} className={"toogle--open" + (state ? "" : "toogle--close")}>v</CardSpan>

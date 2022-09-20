@@ -23,7 +23,7 @@ function TitleLodging(props) {
     return (
         <SectionCard>
             <TitleCard>{props.title}</TitleCard>
-            <DescriptionCard>{props.description}</DescriptionCard>
+            <DescriptionCard>{props.location}</DescriptionCard>
         </SectionCard>
         
     );
