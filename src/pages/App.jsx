@@ -15,14 +15,21 @@ const CardArticle = styled.article`
     justify-content: center;
     border-radius: 25px;
     display: inline-grid;
-	grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 60px;
-	grid-row-gap: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
+    @media only screen and (min-width: 1440px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 60px;
+	    grid-row-gap: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    @media only screen and (min-width: 100px) and (max-width: 1439px) {
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 60px;
+	    grid-row-gap: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
     `
-
-//export const id = "alexandre"
 
 function App() {
     return (

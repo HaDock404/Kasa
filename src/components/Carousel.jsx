@@ -32,10 +32,15 @@ const ArrowRightCard = styled.div`
     margin-right: 20px;
     `
 
+const LengthCard = styled.div`
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 480px;
+    `
+
 let DataStorage;
-
 let background = {}
-
 
 function Carousel(props) {
 
@@ -65,6 +70,7 @@ function Carousel(props) {
     <CarouselCard style={background}>
         <ArrowLeftCard onClick={toggleFewer}>V</ArrowLeftCard>
         <ArrowRightCard onClick={toggleAdd}>V</ArrowRightCard>
+        <LengthCard>{rank + 1}/{DataStorage.length}</LengthCard>
     </CarouselCard>
     );
 }

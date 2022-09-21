@@ -7,6 +7,7 @@ import TitleLodging from '../components/TitleLodging'
 import Host from '../components/Host'
 import Tag from '../components/Tag'
 import InfoBox from '../components/InfoBox'
+import Rating from '../components/Rating'
 
 const GlobalLodging = styled.article``
 
@@ -18,12 +19,25 @@ const SectionTitle = styled.section`
     margin-left: 100px;
     margin-right: 100px;
     `
+
+const SectionYardstick = styled.section`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+    `
+
 const SectionTag = styled.section`
     display: flex;
     flex-direction: row;
     margin-left: 100px;
     margin-right: 100px;
     `
+
+const SectionRank = styled.section`
+    display: flex;
+    flex-direction: row;`
 
 const SectionInfo = styled.section`
     display: flex;
@@ -41,6 +55,7 @@ function Lodging() {
 
     for (let i = 0; i < Data.length; i++) {
         if (Data[i].id === id) {
+            const equipments = Data[i].equipments.map(e => <div>{e}</div>)
             return (
                 <GlobalLodging>
                     <Carousel backgroundDisplay={Data[i].pictures}/>
@@ -48,12 +63,17 @@ function Lodging() {
                         <TitleLodging title={Data[i].title} location={Data[i].location}/>
                         <Host name={Data[i].host.name} picture={Data[i].host.picture}/>
                     </SectionTitle>
-                    <SectionTag>
-                        <Tag />
-                    </SectionTag>
+                    <SectionYardstick>
+                        <SectionTag>
+                            <Tag />
+                        </SectionTag>
+                        <SectionRank>
+                            <Rating rating={Data[i].rating}/>
+                        </SectionRank>
+                    </SectionYardstick>
                     <SectionInfo>
                         <InfoBox title="Description" description={Data[i].description} style={styleInfoBox}></InfoBox>
-                        <InfoBox title="Equipements" description={Data[i].equipments} style={styleInfoBox}></InfoBox>
+                        <InfoBox title="Equipements" description={equipments} style={styleInfoBox}></InfoBox>
                     </SectionInfo>
                 </GlobalLodging>
             )

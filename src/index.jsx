@@ -8,6 +8,8 @@ import {
 import reportWebVitals from './reportWebVitals';
 import "./styles/normalize.css"
 import "./styles/style.css"
+import panorama from './assets/panorama.jpg'
+import panorama2 from './assets/panorama2.jpeg'
 
 import Home from './pages/Home';
 import Error from './pages/Error'
@@ -24,8 +26,8 @@ root.render(
     <GlobalStyle />
     <Header />
         <Routes>
-          <Route path="/" element={<><Home /> <App /><Footer /></>}/>
-          <Route path="/about" element={<><Home /><About /><Footer /></>}/>
+          <Route path="/" element={<><Home style={{backgroundImage:`url("${panorama}")`}} leitmotif="Chez vous, partout et ailleurs"/> <App /><Footer /></>}/>
+          <Route path="/about" element={<><Home style={{backgroundImage:`url("${panorama2}")`}}/><About /><Footer /></>}/>
           <Route path={`/lodging/:id`} element={<><Lodging /><Footer /></>}/>
           <Route path="*" element={<Error />}/>
         </Routes>
