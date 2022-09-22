@@ -2,11 +2,12 @@ import styled from "styled-components";
 import { useState } from "react";
 
 const CarouselCard = styled.div`
+@media only screen and (min-width: 635px) {
     height: 415px;
+    width: calc(100% - 200px);
+    max-width: 1440px;
     margin-top: 25px;
     border-radius: 25px;
-    margin-right: 100px;
-    margin-left: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -14,30 +15,73 @@ const CarouselCard = styled.div`
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    `
+    position: relative;
+}
+@media only screen and (max-width: 634px) {
+    height: 255px;
+    width: calc(100% - 20px);
+    max-width: 1440px;
+    margin-top: 25px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+`
 
 const ArrowLeftCard = styled.div`
+@media only screen and (min-width: 635px) {
     color: white;
     transform: rotate(90deg);
     font-size: 70px;
     cursor: pointer;
     margin-left: 20px;
-    `
+}
+@media only screen and (max-width: 634px) {
+    color: white;
+    transform: rotate(90deg);
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+`
 
 const ArrowRightCard = styled.div`
+@media only screen and (min-width: 635px) {
     color: white;
     transform: rotate(-90deg);
     font-size: 70px;
     cursor: pointer;
     margin-right: 20px;
-    `
+}
+@media only screen and (max-width: 634px) {
+    color: white;
+    transform: rotate(-90deg);
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+`
 
 const LengthCard = styled.div`
+@media only screen and (min-width: 635px) {
     color: white;
     position: absolute;
     left: 50%;
-    top: 480px;
-    `
+    bottom: 28px;
+}
+@media only screen and (max-width: 634px) {
+    color: white;
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+}
+`
 
 let DataStorage;
 let background = {}

@@ -3,11 +3,23 @@ import { Colors } from "../styles/Colors";
 import { useState } from "react";
 
 const CardArticle = styled.article`
+@media only screen and (min-width: 635px) {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 31px;
-    `
+    width: calc(100% - 400px);
+    max-width: 1240px;
+}
+@media only screen and (max-width: 634px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 31px;
+    width: calc(100% - 20px);
+    max-width: 1240px;
+}
+`
 
 const CardTitle = styled.div`
     background-color: ${Colors.primary};
