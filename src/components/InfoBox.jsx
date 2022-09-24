@@ -77,13 +77,13 @@ function InfoBox(props) {
     }
 
     return (
-        <CardArticle style={props.style}>
-            <CardTitle>
-                <Cardh2>{props.title}</Cardh2>
-                <CardSpan onClick={toggle} className={"toogle--open" + (state ? "" : "toogle--close")}>v</CardSpan>
+        <CardArticle style={props.style} key={Math.random()}>
+            <CardTitle key={Math.random()}>
+                <Cardh2 key={Math.random()}>{props.title}</Cardh2>
+                <CardSpan onClick={toggle} className={"toogle--open" + (state ? "" : "toogle--close")} key={Math.random()}>v</CardSpan>
             </CardTitle>
-            <CardDescription className={"collapse--close" + (state ? 'collapse--open' : '')}>
-                <CardDescriptionText>{props.description}</CardDescriptionText>
+            <CardDescription className={"collapse--close" + (state ? 'collapse--open' : '')} key={Math.random()}>
+                <CardDescriptionText key={Math.random()}>{props.description}</CardDescriptionText>
             </CardDescription>
         </CardArticle>
     )

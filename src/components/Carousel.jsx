@@ -84,7 +84,7 @@ const LengthCard = styled.div`
 `
 
 let DataStorage;
-let background = {}
+//let background = {}
 
 function Carousel(props) {
 
@@ -108,7 +108,7 @@ function Carousel(props) {
         }
     }
 
-    background = {backgroundImage: `url(${DataStorage[rank]})`}
+    const background = {backgroundImage: `url(${DataStorage[rank]})`}
 
     return (
     <CarouselCard style={background}>

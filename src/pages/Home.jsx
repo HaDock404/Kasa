@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const CardPanorama = styled.article`
 @media only screen and (min-width: 635px) {
+  background-color: black;
   width: calc(100% - 200px);
   max-width: 1440px;  
   background-repeat: no-repeat;
